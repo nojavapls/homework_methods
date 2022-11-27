@@ -7,12 +7,12 @@ public class task2 {
         checkYear(clientDeviceYear, operationSystem);
     }
 
-    public static void checkYear(int a, String b) {
+    public static void checkYear(int year, String system) {
         int currentYear = LocalDate.now().getYear();
-        if (a == currentYear)
+        if (year == currentYear)
             System.out.println("приложение будет работать корректно.");
-        else if (a < currentYear) {
-            if (b == "IOS")
+        else if (year < currentYear) {
+            if (system == "IOS")
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
             else
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");

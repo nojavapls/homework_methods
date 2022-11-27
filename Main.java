@@ -4,15 +4,16 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int i = sc.nextInt();
-        checkYear(i);
+        System.out.println("Введите год для проверки: ");
+        int year = sc.nextInt();
+        checkYear(year);
     }
 
-    public static void checkYear(int a) {
+    public static void checkYear(int year) {
 
-        if (a % 4 == 0 && a%100 != 0)
-            System.out.println(a + " год является високосным");
+        if (year % 4 == 0 && (year%100 != 0 || year%400 == 0))
+            System.out.println(year + " год является високосным");
         else
-            System.out.println(a + " год не является високосным");
+            System.out.println(year + " год не является високосным");
     }
 }
